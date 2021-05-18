@@ -9,6 +9,7 @@ namespace FizzBuzzKata.Tests
         [Theory]
         [InlineData(1, "1")]
         [InlineData(2, "2")]
+        [InlineData(3, "Fizz")]
         public void FizzBuzzChecker(int number, string expected) => new FizzBuzz().Say(number).Should().Be(expected);
     }
 }

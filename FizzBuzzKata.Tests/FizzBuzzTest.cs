@@ -14,6 +14,6 @@ namespace FizzBuzzKata.Tests
         [InlineData(5, "Buzz")]
         [InlineData(6, "Fizz")]
         [InlineData(9, "Fizz")]
-        public void FizzBuzzChecker(int number, string expected) => new FizzBuzz().Say(number).Should().Be(expected);
+        public void FizzBuzzChecker(int number, string expected) => FizzBuzz.Say(number).Should().Be(expected);
     }
 }

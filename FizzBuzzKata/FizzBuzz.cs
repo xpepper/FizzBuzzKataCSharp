@@ -1,8 +1,8 @@
 namespace FizzBuzzKata
 {
-    public class FizzBuzz
+    public static class FizzBuzz
     {
-        public string Say(int number)
+        public static string Say(int number)
         {
             if (number % 3 == 0)
                 return "Fizz";

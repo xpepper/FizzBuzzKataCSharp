@@ -4,12 +4,12 @@ using Xunit;
 
 namespace FizzBuzzKata.Tests
 {
-    public class SampleTest
+    public class FizzBuzzTest
     {
         [Fact]
-        public void A_sample_test()
+        public void Say_1_for_1()
         {
-            true.Should().Be(false);
+            new FizzBuzz().Say(1).Should().Be("1");
         }
     }
 }

@@ -4,11 +4,16 @@ namespace FizzBuzzKata
     {
         public static string Say(int number)
         {
-            if (number % 3 == 0)
+            if (number.IsMultipleOf(3))
                 return "Fizz";
-            if (number % 5 == 0)
+            if (number.IsMultipleOf(5))
                 return "Buzz";
             return number.ToString();
+        }
+
+        private static bool IsMultipleOf(this int number, int dividend)
+        {
+            return number % dividend == 0;
         }
     }
 }

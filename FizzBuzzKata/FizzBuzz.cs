@@ -4,6 +4,8 @@ namespace FizzBuzzKata
     {
         public static string Say(int number)
         {
+            if (number.IsMultipleOf(3) && number.IsMultipleOf(5))
+                return "FizzBuzz";
             if (number.IsMultipleOf(3))
                 return "Fizz";
             if (number.IsMultipleOf(5))

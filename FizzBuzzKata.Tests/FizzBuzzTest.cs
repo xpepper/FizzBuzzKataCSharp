@@ -1,4 +1,3 @@
-using System;
 using FluentAssertions;
 using Xunit;
 
@@ -15,6 +14,7 @@ namespace FizzBuzzKata.Tests
         [InlineData(6, "Fizz")]
         [InlineData(9, "Fizz")]
         [InlineData(10, "Buzz")]
+        [InlineData(15, "FizzBuzz")]
         public void FizzBuzzChecker(int number, string expected) => FizzBuzz.Say(number).Should().Be(expected);
     }
 }

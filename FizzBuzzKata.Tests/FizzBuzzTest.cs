@@ -13,6 +13,7 @@ namespace FizzBuzzKata.Tests
         [InlineData(4, "4")]
         [InlineData(5, "Buzz")]
         [InlineData(6, "Fizz")]
+        [InlineData(9, "Fizz")]
         public void FizzBuzzChecker(int number, string expected) => new FizzBuzz().Say(number).Should().Be(expected);
     }
 }

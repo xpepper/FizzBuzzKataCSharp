@@ -4,7 +4,7 @@ namespace FizzBuzzKata
     {
         public string Say(int number)
         {
-            if (number == 3 || number == 6)
+            if (number % 3 == 0)
                 return "Fizz";
             if (number == 5)
                 return "Buzz";

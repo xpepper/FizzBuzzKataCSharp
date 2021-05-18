@@ -17,5 +17,10 @@ namespace FizzBuzzKata.Tests
         {
             new FizzBuzz().Say(2).Should().Be("2");
         }
+
+        [Theory]
+        [InlineData(1, "1")]
+        [InlineData(2, "2")]
+        public void FizzBuzzChecker(int number, string expected) => new FizzBuzz().Say(number).Should().Be(expected);
     }
 }

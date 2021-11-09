@@ -4,6 +4,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzKata", "FizzBuzzKat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzKata.Tests", "FizzBuzzKata.Tests\FizzBuzzKata.Tests.csproj", "{201AE079-5FE1-45C0-9274-CFB5A15C3897}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0C02B50F-D61D-4855-8CE1-A7B39B3FB9F0}"
+ProjectSection(SolutionItems) = preProject
+	README.md = README.md
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

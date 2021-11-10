@@ -10,13 +10,18 @@ namespace FizzBuzzKata.Tests
         {
             new FizzBuzz().say(1).Should().Be("1");
         }
+        [Fact]
+        public void SayTwoForTwo()
+        {
+            new FizzBuzz().say(2).Should().Be("2");
+        }
     }
 
     public class FizzBuzz
     {
         public string say(int number)
         {
-            return "1";
+            return number.ToString();
         }
     }
 }

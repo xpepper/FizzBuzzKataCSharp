@@ -2,7 +2,7 @@ namespace FizzBuzzKata
 {
     public class FizzBuzz
     {
-        public string say(int number)
+        public string Say(int number)
         {
             return number.ToString();
         }

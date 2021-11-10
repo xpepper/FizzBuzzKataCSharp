@@ -12,12 +12,12 @@ namespace FizzBuzzKata.Tests
         [Fact]
         public void SayOneForOne()
         {
-            new FizzBuzz().say(1).Should().Be("1");
+            new FizzBuzz().Say(1).Should().Be("1");
         }
         [Fact]
         public void SayTwoForTwo()
         {
-            new FizzBuzz().say(2).Should().Be("2");
+            new FizzBuzz().Say(2).Should().Be("2");
         }
     }
 }

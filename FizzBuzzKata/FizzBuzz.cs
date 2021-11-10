@@ -1,5 +1,3 @@
-using static System.Linq.Enumerable;
-
 namespace FizzBuzzKata
 {
     public class FizzBuzz

@@ -5,24 +5,14 @@ namespace FizzBuzzKata.Tests
 {
     public class FizzBuzzTest
     {
-        [Fact]
-        public void SayOneForOne()
+        [Theory]
+        [InlineData(1, "1")]
+        [InlineData(2, "2")]
+        [InlineData(3, "Fizz")]
+        [InlineData(4, "4")]
+        public void Say(int number, string saidNumber)
         {
-            new FizzBuzz().Say(1).Should().Be("1");
+            new FizzBuzz().Say(number).Should().Be(saidNumber);
         }
-        
-        [Fact]
-        public void SayTwoForTwo()
-        {
-            new FizzBuzz().Say(2).Should().Be("2");
-        }
-
-        [Fact]
-        public void SayFizzForThree()
-        {
-            new FizzBuzz().Say(3).Should().Be("Fizz");
-        }
-
-        
     }
 }

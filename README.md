@@ -11,7 +11,7 @@ The “fun” part is that if the number is divisible by three, you instead say 
 
 Doom is avoided, and the pointing finger moves on.
 
-So of course in order to avoid embarassment infront of your whole class, you have to get the full list printed out so you know what to say. Your class has about 33 pupils and he might go round three times before the bell rings for breaktime. Next maths lesson is on Thursday. Get coding!
+So of course in order to avoid embarrassment in front of your whole class, you have to get the full list printed out so you know what to say. Your class has about 33 pupils and he might go round three times before the bell rings for break-time. Next maths lesson is on Thursday. Get coding!
 
 Write a program that prints the numbers from **1** to **100**. But for **multiples of three** print **"Fizz"** instead of the number and for the **multiples of five** print **"Buzz"**. For numbers which are **multiples of both three and five** print **"FizzBuzz"**.
 

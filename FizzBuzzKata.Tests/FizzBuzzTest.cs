@@ -1,6 +1,10 @@
 using FluentAssertions;
 using Xunit;
 
+namespace FizzBuzzKata
+{
+}
+
 namespace FizzBuzzKata.Tests
 {
     public class FizzBuzzTest
@@ -14,14 +18,6 @@ namespace FizzBuzzKata.Tests
         public void SayTwoForTwo()
         {
             new FizzBuzz().say(2).Should().Be("2");
-        }
-    }
-
-    public class FizzBuzz
-    {
-        public string say(int number)
-        {
-            return number.ToString();
         }
     }
 }

@@ -7,7 +7,7 @@ namespace FizzBuzzKata
         // run me with dotnet run --project FizzBuzzKata
         public static void Main()
         {
-            System.Console.WriteLine("Hello!");
+            Console.WriteLine("Hello!");
         }
     }
 }

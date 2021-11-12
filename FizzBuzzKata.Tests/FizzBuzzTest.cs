@@ -17,12 +17,4 @@ namespace FizzBuzzKata.Tests
             new FizzBuzz().Say(2).Should().Be("2");
         }
     }
-
-    public class FizzBuzz
-    {
-        public string Say(int number)
-        {
-            return number.ToString();
-        }
-    }
 }

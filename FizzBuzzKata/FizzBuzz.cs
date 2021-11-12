@@ -4,7 +4,7 @@ namespace FizzBuzzKata
     {
         public string Say(int number)
         {
-            if (number == 3) return "Fizz";
+            if (number % 3 == 0) return "Fizz";
             return number.ToString();
         }
     }

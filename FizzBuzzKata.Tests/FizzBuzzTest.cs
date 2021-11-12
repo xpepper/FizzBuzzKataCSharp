@@ -12,6 +12,7 @@ namespace FizzBuzzKata.Tests
         [InlineData(5, "Buzz")]
         [InlineData(6, "Fizz")]
         [InlineData(10, "Buzz")]
+        [InlineData(15, "FizzBuzz")]
         public void SayFizzBuzzOrNumber(int number, string saidNumber)
         {
             new FizzBuzz().Say(number).Should().Be(saidNumber);

@@ -16,5 +16,12 @@ namespace FizzBuzzKata.Tests
         {
             new FizzBuzz().Say(2).Should().Be("2");
         }
+
+        [Fact]
+        public void SayFizzForThree()
+        {
+            new FizzBuzz().Say(3).Should().Be("Fizz");
+        }
+
     }
 }

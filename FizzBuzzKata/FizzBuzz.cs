@@ -7,7 +7,7 @@ namespace FizzBuzzKata
     public interface IRule
     {
         string Apply();
-        bool CanApplyTo(int number);
+        bool IsValidForNumber(int number);
     }
 
     public class MultipleRule : IRule
@@ -26,7 +26,7 @@ namespace FizzBuzzKata
             return _whatToSay;
         }
 
-        public bool CanApplyTo(int number)
+        public bool IsValidForNumber(int number)
         {
             return number % _baseNumber == 0;
         }
@@ -46,9 +46,9 @@ namespace FizzBuzzKata
             return _rules.Select(rule => rule.Apply()).Aggregate(((s, s1) => s + s1));
         }
 
-        public bool CanApplyTo(int number)
+        public bool IsValidForNumber(int number)
         {
-            return _rules.All(rule => rule.CanApplyTo(number));
+            return _rules.All(rule => rule.IsValidForNumber(number));
         }
     }
 
@@ -75,7 +75,7 @@ namespace FizzBuzzKata
         {
             foreach (var rule in _rules)
             {
-                if (rule.CanApplyTo(number)) return rule.Apply();
+                if (rule.IsValidForNumber(number)) return rule.Apply();
             }
 
             throw new Exception("cannot apply any rule");
@@ -91,7 +91,7 @@ namespace FizzBuzzKata
             return _number.ToString();
         }
 
-        public bool CanApplyTo(int number)
+        public bool IsValidForNumber(int number)
         {
             _number = number;
             return true;

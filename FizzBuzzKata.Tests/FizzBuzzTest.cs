@@ -1,5 +1,6 @@
 using FluentAssertions;
 using Xunit;
+using static FizzBuzzKata.FizzBuzzRunner;
 
 namespace FizzBuzzKata.Tests
 {
@@ -20,7 +21,17 @@ namespace FizzBuzzKata.Tests
         [InlineData(105, "FizzBuzzBang")]
         public void Say(int number, string saidNumber)
         {
-            new FizzBuzz().Say(number).Should().Be(saidNumber);
+            new FizzBuzz(new()
+            {
+                new CompositeRule(Fizz, Buzz, Bang),
+                new CompositeRule(Fizz, Buzz),
+                new CompositeRule(Fizz, Bang),
+                new CompositeRule(Buzz, Bang),
+                Fizz,
+                Buzz,
+                Bang,
+                SayNumber
+            }).Say(number).Should().Be(saidNumber);
         }
     }
 }

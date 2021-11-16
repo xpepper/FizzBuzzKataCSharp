@@ -1,5 +1,5 @@
-using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FizzBuzzKata
 {
@@ -14,12 +14,9 @@ namespace FizzBuzzKata
 
         public string Say(int number)
         {
-            foreach (var rule in _rules)
-            {
-                if (rule.IsValidForNumber(number)) return rule.Apply();
-            }
-
-            throw new Exception("cannot apply any rule");
+            return _rules
+                .FirstOrDefault(rule => rule.IsValidForNumber(number))
+                .Apply();
         }
     }
 

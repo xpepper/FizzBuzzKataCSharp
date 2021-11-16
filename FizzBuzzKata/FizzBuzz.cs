@@ -1,57 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace FizzBuzzKata
 {
-    public interface IRule
-    {
-        string Apply();
-        bool IsValidForNumber(int number);
-    }
-
-    public class MultipleRule : IRule
-    {
-        private readonly int _baseNumber;
-        private readonly string _whatToSay;
-
-        public MultipleRule(int baseNumber, string whatToSay)
-        {
-            _baseNumber = baseNumber;
-            _whatToSay = whatToSay;
-        }
-
-        public string Apply()
-        {
-            return _whatToSay;
-        }
-
-        public bool IsValidForNumber(int number)
-        {
-            return number % _baseNumber == 0;
-        }
-    }
-
-    public class CompositeRule : IRule
-    {
-        private readonly IRule[] _rules;
-
-        public CompositeRule(params IRule[] rules)
-        {
-            _rules = rules;
-        }
-
-        public string Apply()
-        {
-            return _rules.Select(rule => rule.Apply()).Aggregate(((s, s1) => s + s1));
-        }
-
-        public bool IsValidForNumber(int number)
-        {
-            return _rules.All(rule => rule.IsValidForNumber(number));
-        }
-    }
-
     public class FizzBuzz
     {
         private readonly List<IRule> _rules = new()

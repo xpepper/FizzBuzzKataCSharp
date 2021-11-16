@@ -13,7 +13,9 @@ namespace FizzBuzzKata
 
         public string Apply()
         {
-            return _rules.Select(rule => rule.Apply()).Aggregate(((s, s1) => s + s1));
+            return _rules
+                .Select(rule => rule.Apply())
+                .Aggregate(((acc, each) => acc + each));
         }
 
         public bool IsValidForNumber(int number)

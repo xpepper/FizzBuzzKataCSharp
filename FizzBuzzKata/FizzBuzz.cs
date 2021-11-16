@@ -16,7 +16,7 @@ namespace FizzBuzzKata
         {
             return _rules
                 .FirstOrDefault(rule => rule.IsValidForNumber(number))
-                .Apply();
+                ?.Apply();
         }
     }
 
